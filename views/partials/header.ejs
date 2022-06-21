@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>GameHub</title>
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <% if (typeof cssSpecific !== "undefined" && cssSpecific) { %>
+    <link rel="stylesheet" href="/css/<%= cssSpecific %>">
+  <% } %>
+
+</head>
+<body>
+  <header>
+    <h1>
+      <a href="/">GameHub</a>
+    </h1>
+    <nav>
+      <ul>
+        <% for (const game of locals.gameList ) { %>
+          <li><a href="/game/<%= game.name %>"><%= game.title %></a></li>
+        <% } %>
+      </ul>
+    </nav>
+
+    <form class="search-form" method="GET" action="/recherche">
+      <input type="text" name="keyword">
+      <button type="submit">Chercher</button>
+    </form>
+
+  </header>

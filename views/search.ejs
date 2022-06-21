@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs')  %> 
+
+    <h3>Recherche</h3>
+
+    <h4>Résultat de la recherche :</h4>
+    <% for(const game of results) { %>
+        <div>
+            <a href="/game/<%= game.name %>">
+                <%= game.title %>
+            </a>
+        </div>
+    <% } %>
+
+<%- include('partials/footer.ejs')  %> 

@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs')  %> 
+
+    <% if(isLogged === true) {%>
+        <h3>Bienvenue <%= login %>, tu peux jouer !</h3>
+    <% } else { %>
+        <img src="https://c.tenor.com/8kuu11MN_KcAAAAC/you-shall-not-pass-lord-of-the-rings.gif"/>
+    <% } %>
+
+<%- include('partials/footer.ejs')  %> 
